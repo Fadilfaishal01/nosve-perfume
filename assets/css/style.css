@@ -72,6 +72,29 @@ h1 {
   padding-top: 95px;
 }
 
+#about-page {
+  opacity: 0;
+  transform: scale(0.1);
+  transition: all 1s ease-in-out;
+}
+
+#product-page {
+  opacity: 0;
+  transform: scale(0.1);
+  transition: all 1s ease-in-out;
+}
+
+#gallery-page {
+  opacity: 0;
+  transform: scale(0.1);
+  transition: all 1s ease-in-out;
+}
+
+.page-active {
+  opacity: 1 !important;
+  transform: scale(1) !important;
+}
+
 #about-section > .container {
   padding: 10px;
 }

@@ -10,6 +10,41 @@ window.onscroll = () =>  {
     }
 };
 
+window.addEventListener('scroll', () => {
+  // About
+  let about = document.querySelector('#about-page');
+  let aboutPositionTop = about.getBoundingClientRect().top;
+
+  // Product
+  let product = document.querySelector('#product-page');
+  let productPositionTop = product.getBoundingClientRect().top;
+
+  // Gallery
+  let gallery = document.querySelector('#gallery-page');
+  let galleryPositionTop = gallery.getBoundingClientRect().top;
+
+  let innerScreen = window.innerHeight / 1;
+
+  if (aboutPositionTop < innerScreen) {
+    about.classList.add('page-active');
+  } else {
+    about.classList.remove('page-active');
+  }
+
+  if (productPositionTop < innerScreen) {
+    product.classList.add('page-active')
+  } else {
+    product.classList.remove('page-active');
+  }
+
+  if (galleryPositionTop < innerScreen) {
+    gallery.classList.add('page-active')
+  } else {
+    gallery.classList.remove('page-active');
+  }
+
+})
+
 $(document).ready(function(){
   $('.owl-carousel').owlCarousel({
       loop:false,
